@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: lightgray;
+    padding: 1%;
+    border-radius: 6px;
+    
+}
+
+.options-container, .login-container {
+    font-size: 1.2em;
+}
+
+.options-container {
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+}
