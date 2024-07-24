@@ -1,0 +1,72 @@
+name: 'Bug Report'
+description: Sugerir correção para a Aplicação Judapp
+
+body:
+  - type: dropdown
+    id: affected-packages
+    attributes:
+      label: Serviço
+      description: "Qual é o serviço afetado por esta requisição?"
+      options:
+        - Gateway
+        - Service Discovery
+        - Usuários
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: "Descrição clara e detalhada sobre o bug."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Descrição
+      description: "Passo-a-passo de como reproduzir o bug."
+      value: |
+        1. Abrir página X;
+        2. Navegador até item Y;
+        3. Clicar sobre link Z.
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento-esperado
+    attributes:
+      label: Comportamento Esperado
+      description: "Descrição do que era esperado que acontecesse."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Imagens de Amostragem
+      description: "Se aplicável, screenshots ou imagens para auxiliar na demonstração do problema."
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposta-principal
+    attributes:
+      label: Informação Adicional
+      description: "Informações referentes às condições do problema."
+      value: | 
+        Ex:
+        - Dispositivo: [e.g. iPhone6]
+        - Sistema Operacional: [e.g. iOS8.1]
+        - Navegador [e.g. stock browser, safari]
+        ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: info-adicional
+    attributes:
+      label: Contexto Adicional
+      description: "Qualquer outra informação relativa ao problema aqui."
+    validations:
+      required: false

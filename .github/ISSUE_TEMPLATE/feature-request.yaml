@@ -1,0 +1,37 @@
+name: 'Feature Request'
+description: Sugerir funcionalidade para a Aplicação Judapp
+
+body:
+  - type: dropdown
+    id: affected-packages
+    attributes:
+      label: Serviço
+      description: "Qual é o serviço afetado por esta requisição?"
+      options:
+        - Gateway
+        - Service Discovery
+        - Usuários
+
+  - type: textarea
+    id: descricao
+    attributes:
+      description: "Descrição resumida do porquê da funcionalidade existir."
+      label: Descrição
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta-principal
+    attributes:
+      description: "Solução proposta dado o caso de uso/cenário descrito anteriormente."
+      label: Solução Proposta
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta-alternativa
+    attributes:
+      description: "Quais outras soluções seriam plausíveis, caso a proposta principal seja inviável?"
+      label: Soluções Alternativas
+    validations:
+      required: false

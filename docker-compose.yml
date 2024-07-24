@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  angular-harbor:
+    build: ./front/angular-harbor
+    restart: always
+    volumes:
+      - "/app/node_modules"
+      - ./front/angular-harbor:/app
+    ports:
+      - 80:80
+
