@@ -8,18 +8,69 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100vh;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
-#input-file-container {
-    background-image: url(../../../assets/images/textures/wood.webp);
-    margin-bottom: 10vh;
+#input-file-container { 
+    background: transparent;
+    backdrop-filter: blur(1px);
+    background-image: linear-gradient(190deg, rgba(185, 138, 77, 0.555), rgba(0, 0, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
     width: 20vw;
     border-radius: 7px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    transition: all 0.7s ease-in-out;
 }
 
 #input-file {
-    color: white;
-    opacity: 100%;
+    display: none;
+}
+
+#input-file-label {
+    background: 
+        linear-gradient(90deg, var(--fifth-color) 50%, transparent 0) repeat-x,
+        linear-gradient(90deg, var(--fifth-color) 50%, transparent 0) repeat-x,
+        linear-gradient(0deg, var(--fifth-color) 50%, transparent 0) repeat-y,
+        linear-gradient(0deg, var(--fifth-color) 50%, transparent 0) repeat-y;
+    background-size: 6px 2px, 6px 2px, 2px 6px, 2px 6px;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: dashedBorderMove .4s infinite linear;
+}
+
+#input-file-container:hover {
+    transform: scale(1.03);
+}
+
+@keyframes dashedBorderMove {
+    100% {
+        background-position: 6px 0, -6px 100%, 0 -6px, 100% 6px;
+    }
+}
+
+#input-file-icon {
+    background-image: url("../../../assets/images/icons/upload.png");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65%;
+}
+
+#input-file-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--fifth-color);
+}
+
+#input-file-text span {
+    text-decoration: underline;
 }
