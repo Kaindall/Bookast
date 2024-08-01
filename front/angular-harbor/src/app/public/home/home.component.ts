@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { NgForm } from "@angular/forms";
+import { Component, Renderer2, ElementRef } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-home',
@@ -10,7 +10,12 @@ import { NgForm } from "@angular/forms";
 export class HomeComponent {
     public filesArr: Array<File> = [];
 
-    someAction(event: Event) {
+    constructor (
+        private router: Router,
+        private componentElement:  ElementRef,
+        private render: Renderer2) {console.log(componentElement.nativeElement.querySelector('main'))}
+
+    addFile(event: Event) {
         const inputElement = event.target as HTMLInputElement;
         let files: FileList | null = inputElement.files;
 
@@ -26,7 +31,7 @@ export class HomeComponent {
         }
 
         console.log(this.filesArr);
-        /* this.someVar = someElement.form.controls["input-file"];
-        console.log(this.someVar); */
+        //setTimeout(()=>{ this.router.navigate(['/upload']); }, 600)
+        
     }; 
 }
