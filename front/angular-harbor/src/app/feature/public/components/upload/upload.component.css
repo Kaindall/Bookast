@@ -1,5 +1,5 @@
 main {
-    background-image: url(../../../assets/images/backgrounds/book.png);
+    background-image: url(../../../../../assets/images/backgrounds/book.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -10,4 +10,8 @@ main {
     justify-content: center;
     height: 100vh;
     -webkit-font-smoothing: subpixel-antialiased;
+}
+
+div {
+    border: 1px solid red;
 }

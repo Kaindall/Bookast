@@ -1,10 +1,10 @@
-<main>
-    <app-navbar />
-    <form id="input-file-form" #fileForm="ngForm">
+<main #mainElement>
+    <form id="input-file-form" #fileForm>
         <label id="input-file-label" for="input-file">  
+            <input style="display: none" id="input-file" type="file" accept=".pdf" multiple 
+            name="input-file" (change)="addFile($event)" ngModel />
             <div id="input-file-icon"></div>
             <p id="input-file-text">Arraste e solte para carregar! <br><br> Ou <span>clique dentro do quadro</span>!</p>
         </label>
-        <input id="input-file" type="file" accept=".pdf" multiple name="input-file" (change)="addFile($event)" ngModel />
     </form>
 </main>

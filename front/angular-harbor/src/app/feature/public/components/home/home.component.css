@@ -1,6 +1,6 @@
 
 main {
-    background-image: url(../../../assets/images/backgrounds/library.png);
+    background-image: url(../../../../../assets/images/backgrounds/library.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -35,10 +35,6 @@ main {
     font-size: 1.25em;
 }
 
-#input-file {
-    display: none;
-}
-
 #input-file-label {
     background: 
         linear-gradient(90deg, var(--fifth-color) 50%, transparent 0) repeat-x,
@@ -61,7 +57,7 @@ main {
 }
 
 #input-file-icon {
-    background-image: url("../../../assets/images/icons/upload.png");
+    background-image: url("../../../../../assets/images/icons/upload.png");
     background-position: center top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -82,19 +78,23 @@ main {
     color: white;
 }
 
-#input-file-form.ng-dirty {
-    animation: zoomInFadeOut 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) reverse both;
+/* .zoomEffect {
+    animation: zoomInFadeOut 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) reverse both;
+}
+
+.zoomEffectSlow {
+    animation: zoomInFadeOut 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) reverse both;
 }
 
 @keyframes zoomInFadeOut {
-0% {
-    transform: scale(2);
-    filter: blur(4px);
-    opacity: 0;
-}
-100% {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
-}
-}
+    0% {
+        transform: scale(2);
+        filter: blur(4px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+} */

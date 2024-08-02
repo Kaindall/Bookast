@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './core/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./public/public.module').then(module => module.PublicModule) },
+  { path: '', loadChildren: () => import('./feature/public/public.module').then(module => module.PublicModule) },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'index' } //temporario, mudar para
 ];
