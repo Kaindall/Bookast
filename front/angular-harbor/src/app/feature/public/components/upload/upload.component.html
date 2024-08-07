@@ -1,10 +1,10 @@
 <main>
-    <form>
-        <div *ngFor="let book of booksService.getBooks()">{{ book.name }}</div>
-        <div>Teste2</div>
-        <!-- <label>
-            <input style= "display: none" id="" />
-
-        </label> -->
+    <form id="input-file-form" #fileForm>
+        <label id="input-file-label" for="input-file">  
+            <input style="display: none" id="input-file" type="file" accept=".pdf" multiple 
+            name="input-file" (change)="addFile($event)" ngModel />
+            <div id="input-file-icon"></div>
+            <p id="input-file-text">Arraste e solte para carregar! <br><br> Ou <span>clique aqui</span>!</p>
+        </label>
     </form>
 </main>

@@ -2,30 +2,47 @@ main {
     position: fixed;
     top: 2px;
     left: 20vw;
+    background: rgb(255, 255, 255, 0.05);
     display: flex;
     justify-content: space-between;
-    background-color: var(--fourth-color);
-    color: var(--fifth-color);
     padding: 1vh 2vw;
     width: 60vw;
     max-width: 1280px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-.options-container a, .login-container a {
-    font-size: 1.2em;
-    text-decoration: none;
-}
-
-.options-container {
-    display: flex;
-    gap: 5vw;
-    align-items: center;
+    margin-top: 10px;
+    border-radius: 12px;
+    color: #fff;
 }
 
 .login-container {
     display: flex;
-    gap: 5vw;
+    gap: 2vw;
     align-items: center;
+}
+
+.login-container a {
+    position: relative;
+    color: lightgrey;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: font-size 1s ease-in-out;
+}
+
+.login-container a:hover {
+    -webkit-text-fill-color: white;
+}
+
+.login-container a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: lightgrey;
+    transition: width .5s ease-out;
+}
+
+.login-container a:hover::before {
+    width: 100%;
 }
