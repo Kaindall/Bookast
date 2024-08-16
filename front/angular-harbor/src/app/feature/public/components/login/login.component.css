@@ -1,0 +1,8 @@
+main {
+    background: lightblue; 
+    width: 400px;
+    height: 400px;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+}

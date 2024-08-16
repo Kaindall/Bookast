@@ -1,5 +1,6 @@
 main {
     position: fixed;
+    z-index: 20;
     top: 2px;
     left: 20vw;
     background: rgb(255, 255, 255, 0.05);
@@ -11,6 +12,13 @@ main {
     margin-top: 10px;
     border-radius: 12px;
     color: #fff;
+}
+
+app-login {
+    position: absolute;
+    z-index: 10;
+    top: 105%;
+    right: 0%;
 }
 
 .login-container {

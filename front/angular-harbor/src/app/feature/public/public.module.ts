@@ -10,9 +10,10 @@ import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
 
 import { BooksService } from "./services/books.service";
+import { AnimationComponent } from "./components/animation/animation.component";
 
 @NgModule({
-    declarations: [HomeComponent, UploadComponent, LoginComponent, SignupComponent, NavbarComponent],
+    declarations: [HomeComponent, UploadComponent, LoginComponent, SignupComponent, NavbarComponent, AnimationComponent],
     imports: [PublicRoutingModule, FormsModule, CommonModule],
     providers: [BooksService]
 })

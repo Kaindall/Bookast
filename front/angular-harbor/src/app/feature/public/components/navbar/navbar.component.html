@@ -1,7 +1,13 @@
-<main id='app-navbar'>
-    <h3>Ícone</h3>
-    <div class="login-container">
-        <a>Login</a>
-        <a>Cadastro</a>
-    </div>
-</main>
+    <main id='app-navbar'>
+        <h3>Ícone</h3>
+        <div class="login-container">
+            <a (click)="toggleLogin()">Login</a>
+            <!-- <app-login /> -->
+            <app-login *ngIf="loginOpen" [loginAnimation]="loginAnimation" />
+            <a>Cadastro</a>
+            <!-- <details>
+                <summary>Login</summary>
+                <app-login />
+            </details> -->
+        </div>
+    </main>
