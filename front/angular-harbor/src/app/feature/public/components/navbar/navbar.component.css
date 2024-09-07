@@ -1,15 +1,20 @@
+#navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 nav {
     position: fixed;
     z-index: 20;
-    top: 2px;
-    left: 20vw;
+    top: 1vh;
     background: rgb(255, 255, 255, 0.05);
     display: flex;
     justify-content: space-between;
-    padding: 1vh 2vw;
-    width: 60vw;
-    max-width: 1280px;
-    margin-top: 10px;
+    padding: 0vh 2vw 0vh 1vw;
+    width: clamp(350px, 60vw, 1280px);
+    height: 40px;
     border-radius: 12px;
     color: #fff;
     overflow: visible;
@@ -23,38 +28,41 @@ app-login {
 }
 
 #icon-container {
+    align-self: flex-start;
     display: flex;
-    gap: 15px;
-    width: 35px;
+    align-items: center;
+    gap: max(20px, 1.5vw);
     overflow: visible;
+    max-height: 40px;
 }
 
 #navbar-icon {
-    position: absolute;
-    left: 1%;
-    top: -30%;
+    position: relative;
+    bottom: 0vh;
     background-image: url("../../../../../assets/images/icons/icon.png");
-    background-position: center top;
+    background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 140px;
+    width: min(25vw, 100px);
+    height: 70px;
     cursor: pointer;
+}
+
+#navbar-icon:hover {
+    transform: scale(0.95);
 }
 
 #navbar-icon-text {
-    position: absolute;
-    left: 12%;
-    top: 25%;
-    background-image: url("../../../../../assets/images/icons/icon-name.png");
-    background-position: center top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 130px;
-    height: 140px;
-    cursor: pointer;
+    color: lightgray;
+    font-size: 1.6em;
+    font-family: var(--icon-font-text);
+    transition: font-size ease-in-out 0.1s;
 }
 
+#navbar-icon-text:hover {
+    color: white;
+    cursor: pointer;
+}
 
 .login-container {
     display: flex;
