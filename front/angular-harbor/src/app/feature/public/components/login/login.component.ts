@@ -10,7 +10,7 @@ import { animate, keyframes, state, style, transition, trigger } from "@angular/
         trigger('toggleLogin', [
             transition(':enter', animate('.5s ease-in-out', keyframes([
                 style({opacity: '0', height: '0px', offset: 0}),
-                style({opacity: '1', height: '400px', offset: 1})
+                style({opacity: '1', height: '300px', offset: 1})
                 ]))
             ),
             state('close', style({opacity: '0', height: '0px', offset: 0})),

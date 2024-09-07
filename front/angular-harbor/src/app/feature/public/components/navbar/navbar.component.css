@@ -12,6 +12,7 @@ nav {
     margin-top: 10px;
     border-radius: 12px;
     color: #fff;
+    overflow: visible;
 }
 
 app-login {
@@ -20,6 +21,40 @@ app-login {
     top: 105%;
     right: 0%;
 }
+
+#icon-container {
+    display: flex;
+    gap: 15px;
+    width: 35px;
+    overflow: visible;
+}
+
+#navbar-icon {
+    position: absolute;
+    left: 1%;
+    top: -30%;
+    background-image: url("../../../../../assets/images/icons/icon.png");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 140px;
+    cursor: pointer;
+}
+
+#navbar-icon-text {
+    position: absolute;
+    left: 12%;
+    top: 25%;
+    background-image: url("../../../../../assets/images/icons/icon-name.png");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 140px;
+    cursor: pointer;
+}
+
 
 .login-container {
     display: flex;
