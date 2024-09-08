@@ -1,17 +1,20 @@
-<main [@toggleLogin]="loginAnimation">
+<main [@toggleLogin]="loginAnimation" id="login-container">
     <form id="login-form">
+        <i id="login-logo">Bookast</i>
         <div id="login-input-container">
-            <label for="name-input">Nome:
+            <div class="login-field">
+                <label for="name-input">Nome</label>
                 <input id="name-input" class="login-input"/>
-            </label>
-            <label for="password-input">Senha:
+            </div>
+            <div class="login-field">
+                <label for="password-input">Senha</label>
                 <input id="password-input" class="login-input"/>
-            </label>
+            </div>
         </div>
         <div id="login-links">
             <a>Esqueci a Senha</a>
             <a>Cadastre-se</a>
         </div>
-        <button>Confirmar</button>
+        <button id="login-submit">Confirmar</button>
     </form>
 </main>

@@ -5,7 +5,7 @@
     width: 100%;
 }
 
-nav {
+#app-navbar {
     position: fixed;
     z-index: 20;
     top: 1vh;

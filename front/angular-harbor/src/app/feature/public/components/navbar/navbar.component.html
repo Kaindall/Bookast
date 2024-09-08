@@ -1,18 +1,13 @@
-<div id="navbar-container">
-    <nav id='app-navbar'>
-        <div id="icon-container">
-            <a id="navbar-icon"></a>
+<nav id="navbar-container">
+    <ul id='app-navbar'>
+        <li id="icon-container">
+            <a id="navbar-icon" alt="logo"></a>
             <a id="navbar-icon-text">Bookast</a>
-        </div>
-        <div class="login-container">
+        </li>
+        <li class="login-container">
             <a (click)="toggleLogin()">Login</a>
-            <!-- <app-login /> -->
             <app-login *ngIf="loginOpen" [loginAnimation]="loginAnimation" />
             <a>Cadastro</a>
-            <!-- <details>
-                <summary>Login</summary>
-                <app-login />
-            </details> -->
-        </div>
-    </nav>
-</div>    
+        </li>
+    </ul>
+</nav>    
