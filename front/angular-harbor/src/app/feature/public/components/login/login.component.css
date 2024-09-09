@@ -1,7 +1,7 @@
 #login-container {
     background: transparent;
-    backdrop-filter: blur(1px);
-    background-image: linear-gradient(190deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(4px);
+    background-image: linear-gradient(190deg, transparent 0%, rgba(124, 124, 124, 0.2) 100%);
     width: 250px;
     color: white;
     border-radius: 15px;
@@ -29,22 +29,50 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 5%;
     width: 100%;
 }
 
 .login-field {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap:4px;
+    flex-direction: column-reverse;
+    gap: 5px;
+}
+
+.login-label {
+    cursor: none;
+    pointer-events: none;
+    font-size: 1.1em;
+    font-weight: normal;
+    transition: 
+        font-size ease-in-out 0.2s,
+        transform ease-in-out 0.2s;
+    transform: translateY(20px) translateX(5px);
+    
 }
 
 .login-input {
-    background: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    display: block;
+    width: 200px;
+    padding-left: 3px;
+    font-size: 1em;
+    color: white;
     border: none;
-    border-radius: 5px;
-    padding: 2px 2px 2px 4px;
+    border-bottom: 1px solid #515151;
+    border-radius: 3px;
+}
+
+.login-input:focus {
+    outline: none;
+}
+
+.login-input:focus ~ label, .login-input:valid ~ label {
+    font-size: 0.9em;
+    transform: translateY(0px) translateX(0px);
+    color: lightgray;
 }
 
 #login-links {
